@@ -19,12 +19,12 @@ and its families all use.
 
 | Admin Dashboard | Schedule |
 |---|---|
-| ![Admin Dashboard](docs/screenshots/dashboard.png) | ![Schedule](docs/screenshots/schedule.png) |
+| ![Admin Dashboard](screenshots/dashboard.png) | ![Schedule](screenshots/schedule.png) |
 | At-a-glance view of today's lessons, pending requests, and lessons that have drifted past a student's package end date. | One calendar for every lesson, every teacher, every room. |
 
 | Student Profile | Student/Parent Portal |
 |---|---|
-| ![Student Profile](docs/screenshots/student-profile.png) | ![Student/Parent Portal](docs/screenshots/portal-balance.png) |
+| ![Student Profile](screenshots/student-profile.png) | ![Student/Parent Portal](screenshots/portal-balance.png) |
 | Each student's packages, balance, and lesson history in one place. | Parents and students see their own balance and upcoming lessons. |
 
 ## What this gives you
