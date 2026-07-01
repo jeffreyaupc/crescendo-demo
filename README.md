@@ -3,6 +3,8 @@
 A complete operations system for running a music school — scheduling, billing,
 packages, and parent/student/teacher self-service, all in one place.
 
+Link to landing page: [crescendo-demo-black.vercel.app]
+
 ## The problem
 
 Running a music school usually means juggling a paper calendar, a spreadsheet of who
