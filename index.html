@@ -17,6 +17,7 @@
       </div>
       <nav>
         <a href="#look-inside">Look inside</a>
+        <a href="#in-motion">See it in motion</a>
         <a href="#who-uses-it">Who it's for</a>
         <a href="#how-it-works">How it works</a>
       </nav>
@@ -112,16 +113,87 @@
       </div>
 
       <div class="showcase-row rev">
+        <div class="shot"><img src="screenshots/requests.png" alt="Requests queue with pending reschedule, makeup, and booking requests" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Requests Queue</h3>
+          <p>Reschedules, makeups, and new-lesson requests from families and teachers land in one queue. Accept &amp; schedule in one click — the lesson form comes prefilled from the request. Free lessons the school owes are tracked right below until they're honored.</p>
+        </div>
+      </div>
+
+      <div class="showcase-row">
+        <div class="shot"><img src="screenshots/payments.png" alt="Payments page listing every payment with source and method" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Payments</h3>
+          <p>Every dollar in, in one ledger — who paid, how (cash, card, e-transfer, Stripe), and for what. Filter by month or source, and totals update live.</p>
+        </div>
+      </div>
+
+      <div class="showcase-row rev">
+        <div class="shot"><img src="screenshots/rentals.png" alt="Rentals page tracking rented instruments, deposits, and revenue" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Instrument Rentals</h3>
+          <p>Rent keyboards, violins, and amps to students or walk-ins. Deposits held, expected returns, and actual revenue per rental — tracked without touching tuition balances.</p>
+        </div>
+      </div>
+
+      <div class="showcase-row">
+        <div class="shot"><img src="screenshots/portal-home.png" alt="Parent portal home with balance, next lesson, and quick actions" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Parent Portal</h3>
+          <p>Parents see the balance, the next lesson, and one-tap actions — request a lesson, a makeup, or a reschedule. Families with multiple children switch between them in one account.</p>
+        </div>
+      </div>
+
+      <div class="showcase-row rev">
         <div class="shot"><img src="screenshots/portal-balance.png" alt="Student and parent portal showing balance and upcoming lessons" loading="lazy" /></div>
         <div class="copy">
-          <h3>Student / Parent Portal</h3>
-          <p>Parents and students see their own balance and upcoming lessons, and can buy their next package online — no phone call required.</p>
+          <h3>Balance &amp; Packages</h3>
+          <p>Families see exactly where their package stands — lessons used, amount remaining, and when to renew — and can buy the next package online. No phone call required.</p>
+        </div>
+      </div>
+
+      <div class="showcase-row">
+        <div class="shot"><img src="screenshots/teacher-schedule.png" alt="Teacher portal weekly schedule" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Teacher Portal</h3>
+          <p>Teachers get their own week at a glance, take attendance, leave lesson notes, and see their pay add up — without needing anything from the front desk.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="alt" id="who-uses-it">
+  <section class="alt" id="in-motion">
+    <div class="wrap">
+      <h2 class="section-title">See it in motion</h2>
+      <p class="section-sub">Two real workflows, captured directly from the app.</p>
+
+      <div class="showcase-row">
+        <div class="shot">
+          <video autoplay loop muted playsinline preload="metadata" poster="screenshots/requests.png">
+            <source src="media/admin-requests.webm" type="video/webm" />
+          </video>
+        </div>
+        <div class="copy">
+          <h3>Accept a request → lesson scheduled</h3>
+          <p>A parent asked to move Thursday's lesson. The admin opens the queue, hits "Accept &amp; schedule," and the lesson form arrives prefilled — teacher, student, date, time, and the right rate. One more click and it's on the calendar.</p>
+        </div>
+      </div>
+
+      <div class="showcase-row rev">
+        <div class="shot">
+          <video autoplay loop muted playsinline preload="metadata" poster="screenshots/portal-home.png">
+            <source src="media/portal-tour.webm" type="video/webm" />
+          </video>
+        </div>
+        <div class="copy">
+          <h3>What a parent sees</h3>
+          <p>Home, schedule, balance, and the package catalog — a parent checks where things stand and starts their next purchase in under a minute, without contacting the school.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="who-uses-it">
     <div class="wrap">
       <h2 class="section-title">Who uses it</h2>
       <div class="grid-3">
@@ -144,7 +216,7 @@
     </div>
   </section>
 
-  <section id="how-it-works">
+  <section class="alt" id="how-it-works">
     <div class="wrap">
       <h2 class="section-title">How it works</h2>
       <p class="section-sub">The basics, the way an admin would actually use it day to day.</p>
@@ -194,6 +266,19 @@
       </div>
     </div>
   </section>
+
+  <script>
+    // Guarantee the silent demo clips play once scrolled into view, even in
+    // browsers that don't autoplay off-screen video.
+    const vids = document.querySelectorAll('video')
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.play().catch(() => {})
+        else e.target.pause()
+      })
+    }, { threshold: 0.25 })
+    vids.forEach(v => io.observe(v))
+  </script>
 
   <footer>
     <div>Built with React, TypeScript, and Tailwind CSS · Supabase · Stripe</div>
