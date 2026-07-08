@@ -1,278 +1,318 @@
-:root {
-  --indigo-50: #eef2ff;
-  --indigo-100: #e0e7ff;
-  --indigo-400: #818cf8;
-  --indigo-500: #6366f1;
-  --indigo-600: #4f46e5;
-  --indigo-700: #4338ca;
-  --slate-50: #f8fafc;
-  --slate-100: #f1f5f9;
-  --slate-200: #e2e8f0;
-  --slate-400: #94a3b8;
-  --slate-500: #64748b;
-  --slate-600: #475569;
-  --slate-700: #334155;
-  --slate-900: #0f172a;
-  --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 16px rgba(15,23,42,0.06);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crescendo — Music School Management, Without the Chaos</title>
+  <meta name="description" content="One shared system for running a music school: scheduling, billing, packages, and self-service for parents, students, and teachers." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-* { box-sizing: border-box; }
+  <header class="site">
+    <div class="wrap">
+      <div class="brand">
+        <span class="mark">♪</span>
+        Crescendo
+      </div>
+      <nav>
+        <a href="#look-inside">Look inside</a>
+        <a href="#in-motion">See it in motion</a>
+        <a href="#who-uses-it">Who it's for</a>
+        <a href="#how-it-works">How it works</a>
+      </nav>
+    </div>
+  </header>
 
-html { scroll-behavior: smooth; }
+  <section class="hero">
+    <div class="wrap">
+      <h1>Run your music school from one shared system —<br />not a stack of spreadsheets.</h1>
+      <p class="lead">
+        Scheduling, billing, packages, and parent/student/teacher self-service,
+        all in one place. No more paper calendars, payment spreadsheets, or
+        group-chat cancellations.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#look-inside">See it in action</a>
+        <a class="btn btn-secondary" href="mailto:jeffaupc@gmail.com">Get in touch</a>
+      </div>
+    </div>
+  </section>
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: var(--slate-700);
-  background: var(--slate-50);
-  line-height: 1.55;
-}
+  <section class="alt">
+    <div class="wrap">
+      <h2 class="section-title">What this gives you</h2>
+      <p class="section-sub">
+        Running a music school usually means juggling a paper calendar, a
+        spreadsheet of who paid what, a group chat for cancellations, and a
+        notebook for "remind the Smiths their package is almost up." Crescendo
+        replaces all of that.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <div class="dot">📅</div>
+          <h3>One calendar, zero double-booking</h3>
+          <p>Every lesson, every teacher, every room — in one shared view.</p>
+        </div>
+        <div class="card">
+          <div class="dot">💳</div>
+          <h3>Always know who's paid</h3>
+          <p>A clear answer to "has this student paid?" at any moment, with automatic reminders before a package runs out.</p>
+        </div>
+        <div class="card">
+          <div class="dot">🙋</div>
+          <h3>Self-service for families</h3>
+          <p>Parents and students see their own schedule and balance, buy their next package, and request changes — without calling the office.</p>
+        </div>
+        <div class="card">
+          <div class="dot">📝</div>
+          <h3>Requests, not phone tag</h3>
+          <p>New lessons, reschedules, and makeups come in as requests you approve or decline from one place.</p>
+        </div>
+        <div class="card">
+          <div class="dot">⏱️</div>
+          <h3>Cancellation policy, automatic</h3>
+          <p>Notice windows, credits, and makeups enforced consistently — not remembered case by case.</p>
+        </div>
+        <div class="card">
+          <div class="dot">💰</div>
+          <h3>Payroll, calculated for you</h3>
+          <p>Teacher pay is calculated automatically from the lessons actually taught.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-.wrap {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+  <section id="look-inside">
+    <div class="wrap">
+      <h2 class="section-title">A look inside</h2>
+      <p class="section-sub">A few of the screens your front desk, teachers, and families would actually use day to day.</p>
 
-/* Header */
-header.site {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(248,250,252,0.85);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--slate-200);
-}
-header.site .wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  color: var(--slate-900);
-  font-size: 1.05rem;
-}
-.brand .mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--indigo-500), var(--indigo-700));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  flex-shrink: 0;
-}
-header.site nav a {
-  color: var(--slate-600);
-  text-decoration: none;
-  font-size: 0.92rem;
-  margin-left: 24px;
-}
-header.site nav a:hover { color: var(--indigo-600); }
-@media (max-width: 640px) {
-  header.site nav { display: none; }
-}
+      <div class="showcase-row">
+        <div class="shot"><img src="screenshots/dashboard.png" alt="Admin dashboard showing today's schedule and pending requests" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Admin Dashboard</h3>
+          <p>An at-a-glance view of today's lessons, pending requests, and lessons that have drifted past a student's package end date — the day's to-do list, already built.</p>
+        </div>
+      </div>
 
-/* Hero */
-.hero {
-  padding: 88px 0 64px;
-  text-align: center;
-}
-.hero h1 {
-  font-size: 2.6rem;
-  line-height: 1.15;
-  color: var(--slate-900);
-  margin: 0 0 18px;
-  letter-spacing: -0.02em;
-}
-.hero p.lead {
-  font-size: 1.2rem;
-  color: var(--slate-500);
-  max-width: 640px;
-  margin: 0 auto 32px;
-}
-@media (max-width: 640px) {
-  .hero { padding: 56px 0 40px; }
-  .hero h1 { font-size: 1.9rem; }
-  .hero p.lead { font-size: 1.05rem; }
-}
-.cta-row {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-.btn-primary {
-  background: var(--indigo-600);
-  color: white;
-  box-shadow: var(--shadow);
-}
-.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(79,70,229,0.25); }
-.btn-secondary {
-  background: white;
-  color: var(--slate-700);
-  border: 1px solid var(--slate-200);
-}
-.btn-secondary:hover { border-color: var(--indigo-400); color: var(--indigo-600); }
+      <div class="showcase-row rev">
+        <div class="shot"><img src="screenshots/schedule.png" alt="Schedule view colored by teacher across multiple rooms" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Schedule</h3>
+          <p>One calendar for every lesson, every teacher, every room — color-coded by teacher so conflicts and gaps are obvious at a glance.</p>
+        </div>
+      </div>
 
-/* Sections */
-section { padding: 64px 0; }
-section.alt { background: white; border-top: 1px solid var(--slate-200); border-bottom: 1px solid var(--slate-200); }
+      <div class="showcase-row">
+        <div class="shot"><img src="screenshots/student-profile.png" alt="Student profile showing packages, balance, and lesson history" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Student Profile</h3>
+          <p>Each student's packages, balance, and lesson history in one place — no digging through spreadsheets to answer "where do they stand?"</p>
+        </div>
+      </div>
 
-h2.section-title {
-  font-size: 1.8rem;
-  color: var(--slate-900);
-  text-align: center;
-  margin: 0 0 12px;
-  letter-spacing: -0.01em;
-}
-p.section-sub {
-  text-align: center;
-  color: var(--slate-500);
-  max-width: 600px;
-  margin: 0 auto 48px;
-  font-size: 1.02rem;
-}
+      <div class="showcase-row rev">
+        <div class="shot"><img src="screenshots/requests.png" alt="Requests queue with pending reschedule, makeup, and booking requests" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Requests Queue</h3>
+          <p>Reschedules, makeups, and new-lesson requests from families and teachers land in one queue. Accept &amp; schedule in one click — the lesson form comes prefilled from the request. Free lessons the school owes are tracked right below until they're honored.</p>
+        </div>
+      </div>
 
-/* Outcomes grid */
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-@media (max-width: 800px) {
-  .grid-3 { grid-template-columns: 1fr; }
-}
-.card {
-  background: white;
-  border: 1px solid var(--slate-200);
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: var(--shadow);
-}
-.card h3 {
-  margin: 0 0 8px;
-  font-size: 1.05rem;
-  color: var(--slate-900);
-}
-.card p {
-  margin: 0;
-  color: var(--slate-500);
-  font-size: 0.94rem;
-}
-.card .dot {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: var(--indigo-50);
-  color: var(--indigo-600);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 14px;
-  font-size: 1.1rem;
-}
+      <div class="showcase-row">
+        <div class="shot"><img src="screenshots/payments.png" alt="Payments page listing every payment with source and method" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Payments</h3>
+          <p>Every dollar in, in one ledger — who paid, how (cash, card, e-transfer, Stripe), and for what. Filter by month or source, and totals update live.</p>
+        </div>
+      </div>
 
-/* Screenshot showcase */
-.showcase-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  margin-bottom: 64px;
-}
-.showcase-row:last-child { margin-bottom: 0; }
-.showcase-row.rev .shot { order: 2; }
-.showcase-row.rev .copy { order: 1; }
-@media (max-width: 800px) {
-  .showcase-row, .showcase-row.rev { grid-template-columns: 1fr; }
-  .showcase-row.rev .shot, .showcase-row.rev .copy { order: initial; }
-}
-.shot img,
-.shot video {
-  width: 100%;
-  border-radius: 16px;
-  border: 1px solid var(--slate-200);
-  box-shadow: var(--shadow);
-  display: block;
-}
-.copy h3 {
-  font-size: 1.3rem;
-  color: var(--slate-900);
-  margin: 0 0 10px;
-}
-.copy p {
-  color: var(--slate-500);
-  margin: 0;
-  font-size: 1rem;
-}
+      <div class="showcase-row rev">
+        <div class="shot"><img src="screenshots/rentals.png" alt="Rentals page tracking rented instruments, deposits, and revenue" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Instrument Rentals</h3>
+          <p>Rent keyboards, violins, and amps to students or walk-ins. Deposits held, expected returns, and actual revenue per rental — tracked without touching tuition balances.</p>
+        </div>
+      </div>
 
-/* How it works */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-@media (max-width: 800px) {
-  .steps { grid-template-columns: 1fr; }
-}
-.step {
-  display: flex;
-  gap: 14px;
-  background: var(--slate-50);
-  border: 1px solid var(--slate-200);
-  border-radius: 14px;
-  padding: 18px;
-}
-.step .num {
-  flex-shrink: 0;
-  width: 30px;
-  height: 30px;
-  border-radius: 999px;
-  background: var(--indigo-100);
-  color: var(--indigo-700);
-  font-weight: 700;
-  font-size: 0.85rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.step h4 {
-  margin: 0 0 4px;
-  font-size: 0.97rem;
-  color: var(--slate-900);
-}
-.step p {
-  margin: 0;
-  font-size: 0.88rem;
-  color: var(--slate-500);
-}
+      <div class="showcase-row">
+        <div class="shot"><img src="screenshots/portal-home.png" alt="Parent portal home with balance, next lesson, and quick actions" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Parent Portal</h3>
+          <p>Parents see the balance, the next lesson, and one-tap actions — request a lesson, a makeup, or a reschedule. Families with multiple children switch between them in one account.</p>
+        </div>
+      </div>
 
-/* Footer */
-footer {
-  padding: 40px 0;
-  text-align: center;
-  color: var(--slate-400);
-  font-size: 0.86rem;
-}
-footer a {
-  color: var(--slate-500);
-  text-decoration: none;
-}
-footer a:hover { color: var(--indigo-600); }
-footer .built-with { margin-top: 6px; }
+      <div class="showcase-row rev">
+        <div class="shot"><img src="screenshots/portal-balance.png" alt="Student and parent portal showing balance and upcoming lessons" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Balance &amp; Packages</h3>
+          <p>Families see exactly where their package stands — lessons used, amount remaining, and when to renew — and can buy the next package online. No phone call required.</p>
+        </div>
+      </div>
+
+      <div class="showcase-row">
+        <div class="shot"><img src="screenshots/teacher-schedule.png" alt="Teacher portal weekly schedule" loading="lazy" /></div>
+        <div class="copy">
+          <h3>Teacher Portal</h3>
+          <p>Teachers get their own week at a glance, take attendance, leave lesson notes, and see their pay add up — without needing anything from the front desk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="in-motion">
+    <div class="wrap">
+      <h2 class="section-title">See it in motion</h2>
+      <p class="section-sub">Two real workflows, captured directly from the app.</p>
+
+      <div class="showcase-row">
+        <div class="shot">
+          <video autoplay loop muted playsinline controls preload="metadata" poster="screenshots/requests.png">
+            <source src="media/admin-requests.webm" type="video/webm" />
+          </video>
+        </div>
+        <div class="copy">
+          <h3>Accept a request → lesson scheduled</h3>
+          <p>A parent asked to move Thursday's lesson. The admin opens the queue, hits "Accept &amp; schedule," and the lesson form arrives prefilled — teacher, student, date, time, and the right rate. One more click and it's on the calendar.</p>
+        </div>
+      </div>
+
+      <div class="showcase-row rev">
+        <div class="shot">
+          <video autoplay loop muted playsinline controls preload="metadata" poster="screenshots/portal-home.png">
+            <source src="media/portal-tour.webm" type="video/webm" />
+          </video>
+        </div>
+        <div class="copy">
+          <h3>What a parent sees</h3>
+          <p>Home, schedule, balance, and the package catalog — a parent checks where things stand and starts their next purchase in under a minute, without contacting the school.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="who-uses-it">
+    <div class="wrap">
+      <h2 class="section-title">Who uses it</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div class="dot">🧑‍💼</div>
+          <h3>Admin / front desk</h3>
+          <p>Full control: students, teachers, schedule, packages, balances, requests, policy, and payroll — all from one dashboard.</p>
+        </div>
+        <div class="card">
+          <div class="dot">🎵</div>
+          <h3>Teachers</h3>
+          <p>See their own schedule, take attendance, add lesson notes, view their students' history, and message the school or a family.</p>
+        </div>
+        <div class="card">
+          <div class="dot">👨‍👩‍👧</div>
+          <h3>Students / parents</h3>
+          <p>See upcoming lessons and balance, buy the next package online, view payment history, and request a new lesson, reschedule, or makeup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="how-it-works">
+    <div class="wrap">
+      <h2 class="section-title">How it works</h2>
+      <p class="section-sub">The basics, the way an admin would actually use it day to day.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <h4>Add a student</h4>
+            <p>Contact info, emergency contact, notes — with an optional portal invite for the student or a parent.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <h4>Sell a package</h4>
+            <p>A package becomes a "term" — an active window with its own start date, end date, and locked-in rate.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <h4>Schedule lessons</h4>
+            <p>Add a student, teacher, room, date, and time. Lessons can repeat weekly, and group sessions work the same way.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <div>
+            <h4>Attendance bills automatically</h4>
+            <p>Marking a lesson present charges the student's active package at their locked-in rate — no manual invoicing.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">5</div>
+          <div>
+            <h4>Cancellations, handled</h4>
+            <p>A configurable notice window decides what happens automatically — credits, makeups, or a charge.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">6</div>
+          <div>
+            <h4>Renewals, nudged</h4>
+            <p>As a package runs low, a reminder email goes out — and stays on the dashboard until the student actually renews.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged screenshot">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+  <script>
+    // Guarantee the silent demo clips play once scrolled into view, even in
+    // browsers that don't autoplay off-screen video.
+    const vids = document.querySelectorAll('video')
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.play().catch(() => {})
+        else e.target.pause()
+      })
+    }, { threshold: 0.25 })
+    vids.forEach(v => io.observe(v))
+
+    // Click-to-zoom lightbox for screenshots.
+    const lightbox = document.getElementById('lightbox')
+    const lightboxImg = document.getElementById('lightboxImg')
+    function openLightbox(src, alt) {
+      lightboxImg.src = src
+      lightboxImg.alt = alt || ''
+      lightbox.classList.add('open')
+      document.body.style.overflow = 'hidden'
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('open')
+      lightboxImg.src = ''
+      document.body.style.overflow = ''
+    }
+    document.querySelectorAll('.shot img').forEach(img => {
+      img.style.cursor = 'zoom-in'
+      img.addEventListener('click', () => openLightbox(img.src, img.alt))
+    })
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox)
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox() })
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox() })
+  </script>
+
+  <footer>
+    <div>Built with React, TypeScript, and Tailwind CSS · Supabase · Stripe</div>
+    <div class="built-with">
+      <a href="mailto:jeffaupc@gmail.com">jeffaupc@gmail.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>
